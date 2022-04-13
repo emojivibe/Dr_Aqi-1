@@ -14,51 +14,27 @@ class IntroScreen extends StatelessWidget {
   ///Thanks for coming here :-)
   final List<PageViewModel> pages = [
     PageViewModel(
-        title: 'Connect With Everyone',
+        title: 'Real-Time AQI Monitoring',
         body:
-            'Here you can have whatever description you would like to have, you can type it all in here',
+            'Smart Real-time updates and notifications keeps you protected and prepared',
         footer: SizedBox(
           height: 45,
           width: 300,
           child: ElevatedButton(
             style: ElevatedButton.styleFrom(
-                primary: Colors.green,
+                primary: Colors.black,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20)),
                 elevation: 8),
             onPressed: () {},
-            child: const Text("Let's Go", style: TextStyle(fontSize: 20)),
-          ),
-        ),
-        image: Center(child: Image.asset('assets/splash1.png')),
-        decoration: const PageDecoration(
-            titleTextStyle: TextStyle(
-          fontSize: 25.0,
-          fontWeight: FontWeight.bold,
-        ))),
-    PageViewModel(
-        title: 'Have Access Everywhere!',
-        body:
-            'Here you can have whatever description you would like to have, you can type it all in here',
-        footer: SizedBox(
-          height: 45,
-          width: 300,
-          child: ElevatedButton(
-            style: ElevatedButton.styleFrom(
-                // primary: Colors.red,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20)),
-                elevation: 8),
-            onPressed: () {},
-            child: const Text(
-              "Why to wait!",
-              style: TextStyle(fontSize: 20),
-            ),
+            child: const Text("Next", style: TextStyle(fontSize: 20)),
           ),
         ),
         image: Center(
-          child: Image.network(
-              'https://img.freepik.com/free-vector/recruiting-professionals-studying-candidate-profiles_1262-21404.jpg?t=st=1649585335~exp=1649585935~hmac=2d5bad7c01f5f27e7277706c2899fa9ce271537f01ed5fbf80588553084ea556&w=826'),
+          child: Image.asset(
+            'assets/splash1.png',
+            fit: BoxFit.cover,
+          ),
         ),
         decoration: const PageDecoration(
             titleTextStyle: TextStyle(
@@ -66,25 +42,55 @@ class IntroScreen extends StatelessWidget {
           fontWeight: FontWeight.bold,
         ))),
     PageViewModel(
-        title: 'Here We Start!',
+        title: 'Mitigation Measures',
         body:
-            'Here you can have whatever description you would like to have, you can type it all in here',
+            'Effective Mitigation Measures for implementation as per AQI severity',
         footer: SizedBox(
           height: 45,
           width: 300,
           child: ElevatedButton(
             style: ElevatedButton.styleFrom(
-                primary: Colors.red,
+                primary: Colors.black,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20)),
                 elevation: 8),
             onPressed: () {},
-            child: const Text("Let's Start", style: TextStyle(fontSize: 20)),
+            child: const Text("Next", style: TextStyle(fontSize: 20)),
           ),
         ),
         image: Center(
-          child: Image.network(
-              'https://img.freepik.com/free-vector/recruiting-professionals-studying-candidate-profiles_1262-21404.jpg?t=st=1649585335~exp=1649585935~hmac=2d5bad7c01f5f27e7277706c2899fa9ce271537f01ed5fbf80588553084ea556&w=826'),
+          child: Image.asset(
+            'assets/splash2.png',
+            fit: BoxFit.cover,
+          ),
+        ),
+        decoration: const PageDecoration(
+            titleTextStyle: TextStyle(
+          fontSize: 25.0,
+          fontWeight: FontWeight.bold,
+        ))),
+    PageViewModel(
+        title: 'Meningful Data Analytics',
+        body:
+            'Meaningful graphs and data visualisation makes AQI easier to understand',
+        footer: SizedBox(
+          height: 45,
+          width: 300,
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+                primary: Colors.black,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20)),
+                elevation: 8),
+            onPressed: () {},
+            child: const Text("Next", style: TextStyle(fontSize: 20)),
+          ),
+        ),
+        image: Center(
+          child: Image.asset(
+            'assets/splash3.png',
+            fit: BoxFit.cover,
+          ),
         ),
         decoration: const PageDecoration(
             titleTextStyle: TextStyle(
@@ -102,11 +108,14 @@ class IntroScreen extends StatelessWidget {
           pages: pages,
           dotsDecorator: const DotsDecorator(
             size: Size(15, 15),
-            color: Colors.blue,
+            color: Colors.grey,
             activeSize: Size.square(20),
-            activeColor: Colors.red,
+            activeColor: Colors.black,
           ),
           showDoneButton: true,
+          skipStyle: TextButton.styleFrom(primary: Colors.black),
+          doneStyle: TextButton.styleFrom(primary: Colors.black),
+          nextStyle: TextButton.styleFrom(primary: Colors.black),
           done: const Text(
             'Done',
             style: TextStyle(fontSize: 20),
