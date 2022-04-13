@@ -30,10 +30,7 @@ class IntroScreen extends StatelessWidget {
             child: const Text("Let's Go", style: TextStyle(fontSize: 20)),
           ),
         ),
-        image: Center(
-          child: Image.network(
-              'https://img.freepik.com/free-vector/recruiting-professionals-studying-candidate-profiles_1262-21404.jpg?t=st=1649585335~exp=1649585935~hmac=2d5bad7c01f5f27e7277706c2899fa9ce271537f01ed5fbf80588553084ea556&w=826'),
-        ),
+        image: Center(child: Image.asset('assets/splash1.png')),
         decoration: const PageDecoration(
             titleTextStyle: TextStyle(
           fontSize: 25.0,
