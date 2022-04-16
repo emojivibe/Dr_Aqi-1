@@ -1,3 +1,4 @@
+import 'package:draqi/screens/bottomNavBar.dart';
 import 'package:draqi/screens/home_screem.dart';
 import 'package:draqi/screens/introscreens.dart';
 import 'package:draqi/screens/login_sinup/login_screen.dart';
@@ -19,7 +20,8 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       // home: IntroScreen(),
-      home: RegistrationScreen(),
+   home:BottomNavBarr(),
+      // home: RegistrationScreen(),
     );
   }
 }
