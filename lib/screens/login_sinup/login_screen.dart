@@ -90,6 +90,7 @@ class _LoginScreenState extends State<LoginScreen> {
           padding: EdgeInsets.fromLTRB(20, 15, 20, 15),
           minWidth: MediaQuery.of(context).size.width,
           onPressed: () {
+            Navigator.pushNamed(context, 'first');
             // signIn(emailController.text, passwordController.text);
           },
           child: Text(
@@ -219,12 +220,17 @@ class _LoginScreenState extends State<LoginScreen> {
                             //         builder: (context) =>
                             //             RegistrationScreen()));
                           },
-                          child: Text(
-                            "  Create Account",
-                            style: TextStyle(
-                                color: Colors.blue,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 15),
+                          child: TextButton(
+                            onPressed: (){
+                              Navigator.pushNamed(context, 'signup');
+                            },
+                            child: Text(
+                              "  Create Account",
+                              style: TextStyle(
+                                  color: Colors.blue,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 15),
+                            ),
                           ),
                         )
                       ],

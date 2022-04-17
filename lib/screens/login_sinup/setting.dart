@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../bottomNavBar.dart';
 import '../home_screem.dart';
 import 'cart.dart';
 import 'dash_board.dart';
@@ -13,13 +14,13 @@ class Setting extends StatefulWidget {
 }
 
 class _SettingState extends State<Setting> {
-  int currentIndex = 0;
-  final screens = [
-    HomeScreen(),
-    dashBoard(),
-    polltMap(),
-    Cart(),
-  ];
+  // int currentIndex = 0;
+  // final screens = [
+  //   HomeScreen(),
+  //   dashBoard(),
+  //   polltMap(),
+  //   Cart(),
+  // ];
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +29,11 @@ class _SettingState extends State<Setting> {
 
       appBar: AppBar(
         centerTitle: true,
-        leading : Icon(Icons.arrow_back_ios_new_outlined,color: Colors.black),
+        leading : IconButton(icon:Icon(Icons.arrow_back_ios_new_outlined,color: Colors.black),
+        onPressed: (){   Navigator.push(context,  MaterialPageRoute(
+            builder: (context) =>
+                BottomNavBarr())
+        );},),
         backgroundColor: Colors.white,
         title: Text("SETTINGS",style: TextStyle(color: Colors.black),),
 
@@ -45,45 +50,45 @@ class _SettingState extends State<Setting> {
             )),
 
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        currentIndex: currentIndex,
-        onTap: (index) => setState(() => currentIndex = index),
-        backgroundColor: Colors.white,
-        unselectedItemColor: Colors.black54,
-        selectedItemColor: Colors.black,
-        iconSize: 20,
-        selectedFontSize: 15,
-        unselectedFontSize: 13,
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(CupertinoIcons.home),
-            label: 'Home',
-            // backgroundColor: Colors.blue,
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.dashboard_rounded,
-            ),
-            label: 'DashBoard',
-            // backgroundColor: Colors.blue,
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.map_rounded,
-            ),
-            label: 'LocationMap',
-            // backgroundColor: Colors.deepOrangeAccent,
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_bag),
-            label: 'ShopingCart',
-            // backgroundColor: Colors.deepPurpleAccent,
-          ),
-        ],
-      ),
+      // bottomNavigationBar: BottomNavigationBar(
+      //   type: BottomNavigationBarType.fixed,
+      //   currentIndex: currentIndex,
+      //   onTap: (index) => setState(() => currentIndex = index),
+      //   backgroundColor: Colors.white,
+      //   unselectedItemColor: Colors.black54,
+      //   selectedItemColor: Colors.black,
+      //   iconSize: 20,
+      //   selectedFontSize: 15,
+      //   unselectedFontSize: 13,
+      //   showSelectedLabels: false,
+      //   showUnselectedLabels: false,
+      //   items: [
+      //     BottomNavigationBarItem(
+      //       icon: Icon(CupertinoIcons.home),
+      //       label: 'Home',
+      //       // backgroundColor: Colors.blue,
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(
+      //         Icons.dashboard_rounded,
+      //       ),
+      //       label: 'DashBoard',
+      //       // backgroundColor: Colors.blue,
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(
+      //         Icons.map_rounded,
+      //       ),
+      //       label: 'LocationMap',
+      //       // backgroundColor: Colors.deepOrangeAccent,
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.shopping_bag),
+      //       label: 'ShopingCart',
+      //       // backgroundColor: Colors.deepPurpleAccent,
+      //     ),
+      //   ],
+      // ),
     );
   }
 }

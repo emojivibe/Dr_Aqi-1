@@ -2,11 +2,13 @@ import 'package:draqi/screens/home_screem.dart';
 import 'package:draqi/screens/login_sinup/cart.dart';
 import 'package:draqi/screens/login_sinup/dash_board.dart';
 import 'package:draqi/screens/login_sinup/map.dart';
+import 'package:draqi/screens/login_sinup/setting.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class BottomNavBarr extends StatefulWidget {
+
   const BottomNavBarr({Key? key}) : super(key: key);
 
   @override
@@ -20,6 +22,7 @@ class _BottomNavBarrState extends State<BottomNavBarr> {
     dashBoard(),
     polltMap(),
     Cart(),
+    Setting(),
   ];
 
   @override

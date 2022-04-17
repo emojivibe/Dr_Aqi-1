@@ -23,15 +23,19 @@ class MyApp extends StatelessWidget {
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
       // home: IntroScreen(),
-      // initialRoute: 'Cart2',
+      // initialRoute: 'first',
       routes: {
         // When navigating to the "/" route, build the FirstScreen widget.
         'first': (context) =>  BottomNavBarr(),
         // When navigating to the "/second" route, build the SecondScreen widget.
-        'Cart2': (context) => const Cart2(),
+        'Cart2': (context) =>  Cart2(),
+        'setting': (context) =>  Setting(),
+        'signup': (context) => const RegistrationScreen(),
+        'login': (context) => const LoginScreen(),
+
       },
    home:
-   Setting(),
+   IntroScreen(),
       // home: RegistrationScreen(),
     );
   }

@@ -148,9 +148,11 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
           }
           return null;
         },
+
         onSaved: (value) {
           confirmPasswordEditingController.text = value!;
         },
+
         textInputAction: TextInputAction.done,
         decoration: InputDecoration(
           prefixIcon: Icon(Icons.vpn_key),
@@ -170,6 +172,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
           padding: EdgeInsets.fromLTRB(20, 15, 20, 15),
           minWidth: MediaQuery.of(context).size.width,
           onPressed: () {
+            Navigator.pushNamed(context, 'first');
             // signUp(emailEditingController.text, passwordEditingController.text);
           },
           child: Text(
@@ -257,7 +260,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                             backgroundColor:
                                 MaterialStateProperty.all<Color>(Colors.white),
                           ),
-                          onPressed: () async {
+                          onPressed: ()  {
+
                             // await authentication.googleSignIn();
                           },
                           icon: Icon(
@@ -288,12 +292,17 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                             //         builder: (context) =>
                             //             RegistrationScreen()));
                           },
-                          child: Text(
-                            " Login",
-                            style: TextStyle(
-                                color: Colors.blue,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 15),
+                          child: TextButton(
+                            onPressed: (){
+                              Navigator.pushNamed(context, 'login');
+                            },
+                            child: Text(
+                              " Login",
+                              style: TextStyle(
+                                  color: Colors.blue,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 15),
+                            ),
                           ),
                         )
                       ],

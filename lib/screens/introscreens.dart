@@ -1,3 +1,5 @@
+
+import 'package:draqi/screens/login_sinup/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -8,6 +10,7 @@ import 'home_screem.dart';
 // import 'home_screen.dart';
 
 class IntroScreen extends StatelessWidget {
+
   IntroScreen({Key? key}) : super(key: key);
 
   ///Changed a little bit of buttons styling and text for the thumbnail lol
@@ -32,7 +35,7 @@ class IntroScreen extends StatelessWidget {
         ),
         image: Center(
           child: Image.asset(
-            'assets/splash1.png',
+            'assets/Splash1.png',
             fit: BoxFit.cover,
           ),
         ),
@@ -54,7 +57,9 @@ class IntroScreen extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20)),
                 elevation: 8),
-            onPressed: () {},
+            onPressed: () {
+
+            },
             child: const Text("Next", style: TextStyle(fontSize: 20)),
           ),
         ),
@@ -82,13 +87,13 @@ class IntroScreen extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20)),
                 elevation: 8),
-            onPressed: () {},
+            onPressed: (){},
             child: const Text("Next", style: TextStyle(fontSize: 20)),
           ),
         ),
         image: Center(
           child: Image.asset(
-            'assets/splash3.png',
+            'assets/Splash3.png',
             fit: BoxFit.cover,
           ),
         ),
@@ -100,7 +105,9 @@ class IntroScreen extends StatelessWidget {
   ];
 
   @override
+
   Widget build(BuildContext context) {
+
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.fromLTRB(12, 80, 12, 12),
@@ -139,6 +146,6 @@ class IntroScreen extends StatelessWidget {
 
   void onDone(context) async {
     Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => const HomeScreen()));
+        context, MaterialPageRoute(builder: (context) => const LoginScreen()));
   }
 }

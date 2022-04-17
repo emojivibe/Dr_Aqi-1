@@ -1,6 +1,7 @@
+import 'package:draqi/screens/login_sinup/setting.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-
+import 'bottomNavBar.dart';
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -9,6 +10,12 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+
+  Setindex(){
+    setState(() {
+
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +39,12 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         actions: [
           IconButton(onPressed: (){}, icon: Icon(Icons.notifications_active_outlined,color: Colors.black)),
-          IconButton(onPressed: (){}, icon: Icon(Icons.settings,color: Colors.black))
+          IconButton(onPressed:(){
+            Navigator.push(context,  MaterialPageRoute(
+                builder: (context) =>
+                 Setting())
+            );}
+            , icon: Icon(Icons.settings,color: Colors.black))
         ],
       ),
 
